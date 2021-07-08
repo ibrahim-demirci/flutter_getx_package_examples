@@ -17,6 +17,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Stateless build worked');
     return Scaffold(
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -53,9 +54,12 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Merhaba',
-              style: TextStyle(fontSize: 32),
+            // Obx for the text widget can listen the changes.
+            Obx(
+              () => Text(
+                ' ${_controller.count} times you click',
+                style: TextStyle(fontSize: 32),
+              ),
             ),
             Text(
               'Selam',
