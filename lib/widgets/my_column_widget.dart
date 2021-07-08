@@ -13,13 +13,13 @@ class MyColumn extends StatelessWidget {
       children: [
         GetX<CounterController>(
           builder: (_controller2) => Text(
-            ' ${_controller2.count} times you click',
+            ' ${_controller2.count} times you click (GetX)',
             style: TextStyle(fontSize: 32),
           ),
         ),
         Obx(
           () => Text(
-            ' ${_findController.count} times you click',
+            ' ${_findController.count} times you click (Obx)',
             style: TextStyle(fontSize: 32),
           ),
         ),
