@@ -89,6 +89,15 @@ class MyHomePage extends StatelessWidget {
           },
           child: Icon(Icons.arrow_right_outlined),
         ),
+        FloatingActionButton(
+          heroTag: '5',
+          onPressed: () {
+            Get.updateLocale(
+              Get.locale == Locale('tr', 'TR') ? Locale('en', 'US') : Locale('tr', 'TR'),
+            );
+          },
+          child: Icon(Icons.language),
+        ),
       ],
     );
   }
