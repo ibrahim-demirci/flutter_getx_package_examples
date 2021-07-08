@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class SayacController extends GetxController {
+class CounterController extends GetxController {
   // This value have .obs beacuse this can change.
   var _count = 0.obs;
 

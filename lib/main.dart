@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getx_package/controller/counter_controller.dart';
+import 'package:getxfire/getxfire.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +12,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  // This code is add controller to FULL WIDGET TREE.
+  final CounterController _controller = Get.put(CounterController());
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +23,18 @@ class MyHomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             heroTag: '1',
-            onPressed: () {},
+            onPressed: () {
+              _controller.increase();
+              print(_controller.count);
+            },
             child: Icon(Icons.add),
           ),
           FloatingActionButton(
             heroTag: '2',
-            onPressed: () {},
+            onPressed: () {
+              _controller.decrease();
+              print(_controller.count);
+            },
             child: Icon(Icons.remove),
           ),
           FloatingActionButton(
