@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getx_package/controller/counter_controller.dart';
 import 'package:get/get.dart';
 import 'package:getx_package/pages/page2.dart';
+import 'package:getx_package/translation.dart';
 
 import 'widgets/my_column_widget.dart';
 
@@ -10,7 +11,13 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(title: 'Material App', home: MyHomePage());
+    return GetMaterialApp(
+      translations: Messages(),
+      locale: Locale('tr', 'TR'),
+      fallbackLocale: Locale('en', 'US'),
+      title: 'Material App',
+      home: MyHomePage(),
+    );
   }
 }
 
