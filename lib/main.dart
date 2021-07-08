@@ -7,7 +7,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: MyHomePage());
+    return GetMaterialApp(title: 'Material App', home: MyHomePage());
   }
 }
 
@@ -40,8 +40,10 @@ class MyHomePage extends StatelessWidget {
           ),
           FloatingActionButton(
             heroTag: '3',
-            onPressed: () {},
-            child: Icon(Icons.add),
+            onPressed: () {
+              Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+            },
+            child: Icon(Icons.track_changes),
           ),
           FloatingActionButton(
             heroTag: '4',
