@@ -26,11 +26,12 @@ class MyHomePage extends StatelessWidget {
             heroTag: '1',
             onPressed: () {
               _controller.increase();
-              Get.snackbar(
-                'SnackBar',
-                'Arttırıldı',
-                backgroundColor: Colors.teal,
-              );
+              Get.showSnackbar(GetBar(
+                title: 'Default SnackBar',
+                message: 'Arttırıldı',
+                isDismissible: true,
+              ));
+
               print(_controller.count);
             },
             child: Icon(Icons.add),
