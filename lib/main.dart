@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translations: Messages(),
-      locale: Locale('tr', 'TR'),
+      locale: Get.deviceLocale,
       fallbackLocale: Locale('en', 'US'),
       title: 'Material App',
       home: MyHomePage(),
