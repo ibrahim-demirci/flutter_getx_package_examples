@@ -26,6 +26,11 @@ class MyHomePage extends StatelessWidget {
             heroTag: '1',
             onPressed: () {
               _controller.increase();
+              Get.snackbar(
+                'SnackBar',
+                'Arttırıldı',
+                backgroundColor: Colors.teal,
+              );
               print(_controller.count);
             },
             child: Icon(Icons.add),
@@ -34,6 +39,11 @@ class MyHomePage extends StatelessWidget {
             heroTag: '2',
             onPressed: () {
               _controller.decrease();
+              Get.snackbar(
+                'SnackBar',
+                'Azaltıldı',
+                backgroundColor: Colors.teal,
+              );
               print(_controller.count);
             },
             child: Icon(Icons.remove),
