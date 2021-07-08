@@ -74,7 +74,11 @@ class MyHomePage extends StatelessWidget {
         FloatingActionButton(
           heroTag: '4',
           onPressed: () {
+            //This means Navigator.push()
             Get.to(Page2());
+
+            //This means Navigator.replacement()
+            // Get.off(Page2());
           },
           child: Icon(Icons.arrow_right_outlined),
         ),
